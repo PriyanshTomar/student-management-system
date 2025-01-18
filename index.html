@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Login Frame -->
+        <div id="loginFrame">
+            <h1>Welcome to My Project</h1>
+            <button id="welcomeButton">Enter</button>
+        </div>
+
+        <!-- Frame2: Student Details Form -->
+        <div id="formFrame" style="display: none;">
+            <h1>Student Details</h1>
+            <form id="studentForm">
+                <label>First Name:</label>
+                <input type="text" id="firstName" required>
+                
+                <label>Last Name:</label>
+                <input type="text" id="lastName" required>
+                
+                <label>Gender:</label>
+                <select id="gender" required>
+                    <option value="">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                
+                <label>Branch:</label>
+                <input type="text" id="branch" required>
+                
+                <label>Address:</label>
+                <textarea id="address" required></textarea>
+                
+                <button type="submit">Submit Details</button>
+                <button type="button" id="viewStudents">View All Students</button>
+            </form>
+        </div>
+
+        <!-- Frame3: Student Summary -->
+        <div id="summaryFrame" style="display: none;">
+            <h1>Student Details</h1>
+            <p id="studentSummary"></p>
+            <button id="newEntryButton">Make a New Entry</button>
+            <button id="exitButton">Exit</button>
+        </div>
+
+        <!-- Frame4: All Students -->
+        <div id="viewFrame" style="display: none;">
+            <h1>All Students</h1>
+            <table id="studentsTable">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Gender</th>
+                        <th>Branch</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <button id="backButton">Back</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
